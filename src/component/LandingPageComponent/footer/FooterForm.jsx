@@ -8,7 +8,7 @@ const FooterForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false); // Disable submit button during submission
 
   // Using environment variable for API URL
-  const scriptURL = process.env.REACT_APP_API_URL;
+  const scriptURL = "https://script.google.com/macros/s/AKfycbyYJYhBziwvPN3UQkNjLoAvx_kDbDZeFA1k_ak3NULxvWGG1l1iPw7qExsrPPlBlNHO4A/exec";
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
