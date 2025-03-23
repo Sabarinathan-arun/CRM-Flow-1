@@ -1,0 +1,47 @@
+/* Container */
+.process-container {
+  text-align: center;
+  margin: 40px auto;
+  max-width: 1370px; /* Limits width for better readability */
+  padding: 20px;
+}
+
+/* Heading */
+.process-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Paragraph Styling */
+.text-img-box {
+  background-color: #edfee6; 
+  color: #001907;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #444;
+  text-align: center;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .process-container {
+    padding: 10px;
+  }
+
+  .process-title {
+    font-size: 1.6rem;
+  }
+
+  .text-img-box {
+    font-size: 1rem;
+    padding: 15px;
+    max-width: 90%;
+  }
+}

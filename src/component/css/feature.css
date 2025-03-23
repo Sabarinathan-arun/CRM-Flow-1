@@ -1,0 +1,105 @@
+.product-heading{
+    margin-top: 70px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 2rem;
+}
+.product-feature-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem; 
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .product-feature {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center;
+    gap: 0rem;
+    padding: 5px;
+    width: 100%;
+  }
+  
+  .product-image {
+    flex-basis: 45%;
+    text-align: center;
+    order: 2; 
+  }
+  
+  .product-image img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 15px;
+  }
+  
+  .product-content {
+    flex-basis: 45%;
+    order: 1; 
+  }
+  
+  .product-title {
+    font-size: 1.9rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .product-description {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  
+  /* For medium and large screens */
+  @media (min-width: 768px) {
+    .product-feature {
+      justify-content: center;
+    }
+  
+    .product-image {
+      flex-basis: 40%;
+    }
+  
+    .product-content {
+      flex-basis: 40%;
+    }
+  
+    /* Adjust order for even and odd items */
+    .product-feature:nth-child(even) .product-image {
+      order: 1; /* Image on the left for even items */
+    }
+  
+    .product-feature:nth-child(even) .product-content {
+      order: 2; /* Text on the right for even items */
+    }
+  
+    .product-feature:nth-child(odd) .product-image {
+      order: 2; /* Image on the right for odd items */
+    }
+  
+    .product-feature:nth-child(odd) .product-content {
+      order: 1; /* Text on the left for odd items */
+    }
+  }
+  
+  /* For mobile screens */
+  @media (max-width: 767px) {
+    .product-feature {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .product-image, .product-content {
+      flex-basis: 100%;
+    }
+  
+    .product-title {
+      font-size: 1.2rem;
+    }
+  
+    .product-description {
+      font-size: 0.9rem;
+    }
+  }
+  
