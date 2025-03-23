@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import "../../css/footer.css";
-import Toast from "./alert/Toast";
+import "../../css/footer.css"; // Make sure your styles are linked correctly
+import Toast from "./alert/Toast"; // Assuming you have a Toast component for notifications
 
 const FooterForm = () => {
   const [formData, setFormData] = useState({ email: "", message: "" });
   const [toast, setToast] = useState({ show: false, message: "", type: "" });
-  const [isSubmitting, setIsSubmitting] = useState(false); // Disable submit button during submission
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Using environment variable for API URL
-  const scriptURL = "https://script.google.com/macros/s/AKfycbyYJYhBziwvPN3UQkNjLoAvx_kDbDZeFA1k_ak3NULxvWGG1l1iPw7qExsrPPlBlNHO4A/exec";
+  // Replace with your Google Apps Script Web App URL
+  const scriptURL = "https://script.google.com/macros/s/AKfycbw-gRnlOC5nYDdLbeKjNzw-bs-VMM1UoVvxLrA70v-EVbcnSoqKV9J2t9rHrycsiMXVUg/exec"; // Put your Web App URL here
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -16,8 +16,6 @@ const FooterForm = () => {
 
   const showToast = (message, type = "success") => {
     setToast({ show: true, message, type });
-
-    // Hide toast after 3 seconds
     setTimeout(() => {
       setToast((prev) => ({ ...prev, show: false }));
     }, 3000);
@@ -36,28 +34,25 @@ const FooterForm = () => {
       return;
     }
 
-    setIsSubmitting(true); // Disable submit button
+    setIsSubmitting(true);
 
     try {
       await fetch(scriptURL, {
         method: "POST",
-        mode: "cors", // Using CORS for proper error handling
+        mode: "cors", // Use "cors" mode to enable cross-origin requests
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
 
-      // ✅ Show success toast
       showToast("Submitted successfully!");
-
-      // ✅ Reset form
-      setFormData({ email: "", message: "" });
+      setFormData({ email: "", message: "" }); // Reset form after submission
     } catch (error) {
       console.error("Error:", error);
       showToast("Something went wrong.", "error");
     } finally {
-      setIsSubmitting(false); // Re-enable submit button
+      setIsSubmitting(false);
     }
   };
 
@@ -94,7 +89,6 @@ const FooterForm = () => {
         </button>
       </form>
 
-      {/* ✅ Show toast if needed */}
       {toast.show && (
         <Toast
           message={toast.message}
