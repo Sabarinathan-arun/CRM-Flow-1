@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import "../../css/footer.css"; // Make sure your styles are linked correctly
-import Toast from "./alert/Toast"; // Assuming you have a Toast component for notifications
 
 const FooterForm = () => {
   const [formData, setFormData] = useState({ email: "", message: "" });
-  const [toast, setToast] = useState({ show: false, message: "", type: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [responseMessage, setResponseMessage] = useState("");
 
   // Replace with your Google Apps Script Web App URL
   const scriptURL = "https://script.google.com/macros/s/AKfycbzw1adZ6HKAEsLdOAMHlp1fH__rnAZ-CS_ZVMHewjLQvBIdF3a7DOBZSJkGh9OsgS-WaA/exec"; // Put your Web App URL here
@@ -14,43 +12,29 @@ const FooterForm = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const showToast = (message, type = "success") => {
-    setToast({ show: true, message, type });
-    setTimeout(() => {
-      setToast((prev) => ({ ...prev, show: false }));
-    }, 3000);
-  };
-
-  const validateEmail = (email) => {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (!validateEmail(formData.email)) {
-      showToast("Please enter a valid email address.", "error");
-      return;
-    }
 
     setIsSubmitting(true);
 
     try {
-      await fetch(scriptURL, {
+      const response = await fetch(scriptURL, {
         method: "POST",
-        mode: "cors", // Use "cors" mode to enable cross-origin requests
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
 
-      showToast("Submitted successfully!");
-      setFormData({ email: "", message: "" }); // Reset form after submission
+      if (response.ok) {
+        setResponseMessage("Submitted successfully!");
+        setFormData({ email: "", message: "" });
+      } else {
+        setResponseMessage("Submission failed. Please try again.");
+      }
     } catch (error) {
       console.error("Error:", error);
-      showToast("Something went wrong.", "error");
+      setResponseMessage("Something went wrong.");
     } finally {
       setIsSubmitting(false);
     }
@@ -89,13 +73,7 @@ const FooterForm = () => {
         </button>
       </form>
 
-      {toast.show && (
-        <Toast
-          message={toast.message}
-          type={toast.type}
-          onClose={() => setToast({ show: false })}
-        />
-      )}
+      {responseMessage && <p>{responseMessage}</p>}
     </div>
   );
 };
