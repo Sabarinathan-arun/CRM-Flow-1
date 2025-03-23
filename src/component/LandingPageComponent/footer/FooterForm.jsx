@@ -1,18 +1,14 @@
 import React, { useState } from "react";
-
 import "../../css/footer.css";
 import Toast from "./alert/Toast";
 
 const FooterForm = () => {
   const [formData, setFormData] = useState({ email: "", message: "" });
   const [toast, setToast] = useState({ show: false, message: "", type: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false); // Disable submit button during submission
 
-  const scriptURL =
-    "https://script.google.com/macros/s/AKfycbxYBiGgDx_ct9N96guTghUFogFQd1f4Bo1j0b_u4hgi/dev";
-
-
-    // const scriptURL = process.env.REACT_APP_API_URL;
-    // console.log("API URL:", scriptURL);
+  // Using environment variable for API URL
+  const scriptURL = process.env.REACT_APP_API_URL;
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -27,13 +23,25 @@ const FooterForm = () => {
     }, 3000);
   };
 
+  const validateEmail = (email) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!validateEmail(formData.email)) {
+      showToast("Please enter a valid email address.", "error");
+      return;
+    }
+
+    setIsSubmitting(true); // Disable submit button
 
     try {
       await fetch(scriptURL, {
         method: "POST",
-        mode: "no-cors", 
+        mode: "cors", // Using CORS for proper error handling
         headers: {
           "Content-Type": "application/json",
         },
@@ -48,6 +56,8 @@ const FooterForm = () => {
     } catch (error) {
       console.error("Error:", error);
       showToast("Something went wrong.", "error");
+    } finally {
+      setIsSubmitting(false); // Re-enable submit button
     }
   };
 
@@ -55,10 +65,11 @@ const FooterForm = () => {
     <div className="footer-form">
       <h2>Let's Discuss Your Project</h2>
       <form onSubmit={handleSubmit}>
-        <label>Email</label>
+        <label htmlFor="email">Email</label>
         <input
           type="email"
           name="email"
+          id="email"
           className="footer-input"
           value={formData.email}
           onChange={handleChange}
@@ -66,9 +77,10 @@ const FooterForm = () => {
           required
         />
 
-        <label>Message</label>
+        <label htmlFor="message">Message</label>
         <textarea
           name="message"
+          id="message"
           className="footer-input"
           value={formData.message}
           onChange={handleChange}
@@ -77,11 +89,19 @@ const FooterForm = () => {
           style={{ resize: "none" }}
         />
 
-        <button type="submit">Submit</button>
+        <button type="submit" disabled={isSubmitting}>
+          {isSubmitting ? "Submitting..." : "Submit"}
+        </button>
       </form>
 
       {/* ✅ Show toast if needed */}
-      {toast.show && <Toast message={toast.message} type={toast.type} onClose={() => setToast({ show: false })} />}
+      {toast.show && (
+        <Toast
+          message={toast.message}
+          type={toast.type}
+          onClose={() => setToast({ show: false })}
+        />
+      )}
     </div>
   );
 };
