@@ -8,7 +8,7 @@ const FooterForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Replace with your Google Apps Script Web App URL
-  const scriptURL = "https://script.google.com/macros/s/AKfycbw-gRnlOC5nYDdLbeKjNzw-bs-VMM1UoVvxLrA70v-EVbcnSoqKV9J2t9rHrycsiMXVUg/exec"; // Put your Web App URL here
+  const scriptURL = "https://script.google.com/macros/s/AKfycbzw1adZ6HKAEsLdOAMHlp1fH__rnAZ-CS_ZVMHewjLQvBIdF3a7DOBZSJkGh9OsgS-WaA/exec"; // Put your Web App URL here
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
