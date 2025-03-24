@@ -19,15 +19,13 @@
   position: relative;
 }
 
-.hero-floating-wrapper {
 
-}
 
 .hero-floating-img {
   position: absolute;
   top: -150px;
   /* Move slightly up */
-  right: -19px;
+  right: -23px;
   /* Move slightly out */
   width: 230px;
   height: 380px;

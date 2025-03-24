@@ -3,7 +3,7 @@ import '../../css/marketing.css';
 
 const MarketingCard = () => {
   const openDemo = () => {
-    window.open("https://frontend-master-tau.vercel.app/dashboard", "_blank");
+    window.open("https://mycrmflow-demo-main.vercel.app", "_blank");
   };
   return (
     <div className="marketing-card-container">
