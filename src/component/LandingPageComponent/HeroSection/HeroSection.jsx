@@ -8,7 +8,7 @@ const HeroSection = () => {
   };
 
   const openDemo = () => {
-    window.open("https://frontend-master-tau.vercel.app/dashboard", "_blank");
+    window.open("https://mycrmflow-demo-main.vercel.app", "_blank");
   };
 
   return (

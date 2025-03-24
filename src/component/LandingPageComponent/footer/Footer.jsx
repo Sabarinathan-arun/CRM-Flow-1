@@ -4,7 +4,7 @@ import { HashLink } from "react-router-hash-link";
 import FooterForm from "./FooterForm";
 import "../../css/footer.css";
 import { GrInstagram } from "react-icons/gr";
-import logo from "../../Asset/logo.jpg"
+import logo from "../../Asset/crm flow 121.png"
 const navLinks = [
   { name: "Home", path: "#home" },
   { name: "Feature", path: "#feature" },

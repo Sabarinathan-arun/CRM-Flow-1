@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import "../../css/navbar.css";
-import logo from "../../Asset/logo.jpg";
+import logo from "../../Asset/crm flow 121.png";
 
 const navLinks = [
   { name: "Home", path: "#home" },
