@@ -1,20 +1,27 @@
 import React from 'react';
-import '../../css/marketing.css'; 
+import '../../css/marketing.css';
 
 const MarketingCard = () => {
-  const openDemo = () => {
-    window.open("https://mycrmflow-demo-main.vercel.app", "_blank");
-  };
-  return (
-    <div className="marketing-card-container">
-      <div className="marketing-card">
-        <p className="marketing-card-text">
-          Make every part of the customer lifecycle for marketing and sales teams more effective.
-        </p>
-        <button className="marketing-card-button" onClick={openDemo}>Try It</button>
-      </div>
-    </div>
-  );
+  const openDemo = () => {
+    window.open("https://mycrmflow-demo-main.vercel.app", "_blank");
+  };
+
+  return (
+    <section className="marketing-card-container" aria-label="CRM Flow marketing demo">
+      <div className="marketing-card">
+        <h2 className="marketing-card-text">
+          Supercharge Your Customer Journey – From First Click to Closed Deal.
+        </h2>
+        <button
+          className="marketing-card-button"
+          onClick={openDemo}
+          aria-label="Open CRM Flow demo in a new tab"
+        >
+          Try CRM Flow Demo
+        </button>
+      </div>
+    </section>
+  );
 };
 
 export default MarketingCard;
