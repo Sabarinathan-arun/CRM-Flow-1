@@ -1,47 +1,53 @@
 import React from 'react';
-import '../../css/question.css'; 
+import '../../css/question.css'; 
 
 const FrequentQuestion = () => {
-  const faqData = [
-    {
-      question: "What is CRM Flow?",
-      answer: "CRM Flow is a customizable customer relationship management platform designed to streamline your business processes, manage customer interactions, and increase sales efficiency.",
-    },
-    {
-      question: "Is CRM Flow easy to integrate?",
-      answer: "Yes, CRM Flow integrates seamlessly with third-party tools and existing systems, ensuring smooth transitions.",
-    },
-    {
-      question: "Are there any limits to upgrading and downgrading between plans?",
-      answer: "Yes, CRM Flow is fully customizable to your needs, allowing you to upgrade or downgrade plans as required. We can easily add or remove features according to your requirements, ensuring flexibility and scalability at any time.",
-    },
-    {
-      question: "How do I pay for CRM Flow?",
-      answer: "You can pay for CRM Flow through various flexible payment options, including credit/debit cards, bank transfers, and other secure online payment methods. There is a one-time fee for the software, and after that, you only pay for any maintenance or changes if needed, ensuring flexibility and cost-efficiency.",
-    },
-    {
-      question: "What happens if I need additional features or updates after purchasing CRM Flow?",
-      answer: "If you need additional features or updates after purchasing CRM Flow, our team can easily implement the changes. We charge only for maintenance or any new features added, allowing you to customize the software as your business evolves without recurring subscription fees.",
-    },
-  ];
+  const faqData = [
+    {
+      question: "What is CRM Flow?",
+      answer:
+        "CRM Flow is a powerful custom CRM solution designed for small businesses. It helps manage customer interactions, automate lead management, and increase sales without the clutter of unnecessary features.",
+    },
+    {
+      question: "Is CRM Flow easy to integrate with existing tools?",
+      answer:
+        "Absolutely. CRM Flow is an easy CRM that integrates seamlessly with your existing software stack, including third-party platforms, making onboarding quick and efficient.",
+    },
+    {
+      question: "Can I upgrade or downgrade my CRM plan anytime?",
+      answer:
+        "Yes, CRM Flow offers full flexibility. You can easily upgrade or downgrade your CRM features based on your business needs, making it ideal for growing or evolving companies.",
+    },
+    {
+      question: "How does CRM Flow pricing work?",
+      answer:
+        "CRM Flow offers a transparent pricing model. There’s a one-time setup cost, and then you only pay when you request updates or custom features—no ongoing subscription required. It’s the best CRM software for small businesses looking for cost-effective growth.",
+    },
+    {
+      question: "Can I request custom features after purchasing CRM Flow?",
+      answer:
+        "Yes. As a fully customizable CRM, you can request new features or updates anytime. Our team will tailor the system as your business grows, helping you stay ahead without paying for features you don’t use.",
+    },
+  ];
 
+  return (
+    <div className="faq-container">
+      <h1 className="faq-heading">Frequently Asked Questions</h1>
+      <h2 className="hidden-h2">Learn About Our Custom CRM, Easy Integration, and Sales Growth</h2>
 
-  return (
-    <div className="faq-container">
-      <h1 className="faq-heading">Frequently Asked Questions</h1>
-      {faqData.map((faq, index) => (
-        <div key={index} className="faq-drawer">
-          <input className="faq-drawer__trigger" id={`faq-drawer-${index}`} type="checkbox" />
-          <label className="faq-drawer__title" htmlFor={`faq-drawer-${index}`}>{faq.question}</label>
-          <div className="faq-drawer__content-wrapper">
-            <div className="faq-drawer__content">
-              <p>{faq.answer}</p>
-            </div>
-          </div>
-        </div>
-      ))}
-    </div>
-  );
+      {faqData.map((faq, index) => (
+        <div key={index} className="faq-drawer">
+          <input className="faq-drawer__trigger" id={`faq-drawer-${index}`} type="checkbox" />
+          <label className="faq-drawer__title" htmlFor={`faq-drawer-${index}`}>{faq.question}</label>
+          <div className="faq-drawer__content-wrapper">
+            <div className="faq-drawer__content">
+              <p>{faq.answer}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
 };
 
 export default FrequentQuestion;
