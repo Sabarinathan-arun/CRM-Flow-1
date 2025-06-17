@@ -36,8 +36,7 @@ const ProductFeature = () => {
   return (
     <>
       <div className='product-heading'>
-        <h2>Top CRM Features to Grow Your Business in 2025</h2>
-        <h3 className='hidden-h2'>Custom CRM Features That Help Increase Sales & Simplify Lead Management</h3>
+        <h2 className='hidden-h2'>Top Custom CRM Features to Increase Sales & Simplify Lead Management</h2>
       </div>
 
       <div className="product-feature-container">
