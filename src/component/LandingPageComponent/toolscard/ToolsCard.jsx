@@ -11,7 +11,7 @@ const ToolsCard = () => {
   const tools = [
     {
       title: "Custom CRM Smart Forms",
-      description: "Create branded, user-friendly forms that streamline CRM lead management. Capture and convert leads with ease—perfect for small business growth.",
+      description: "Create branded, user-friendly forms that streamline CRM lead management. Capture and convert leads with ease, perfect for small business growth.",
       icon: <FaWpforms size={30} aria-hidden="true" />,
     },
     {
@@ -21,12 +21,12 @@ const ToolsCard = () => {
     },
     {
       title: "Unified CRM Lead Inbox",
-      description: "Centralize conversations and improve team collaboration. Manage leads efficiently across email, chat, and more—boost response time and increase sales.",
+      description: "Centralise conversations and improve team collaboration. Manage leads efficiently across email, chat, and more, boosting response time and increasing sales.",
       icon: <BiSolidConversation size={30} aria-hidden="true" />,
     },
     {
       title: "CRM Email Builder for Campaigns",
-      description: "Design eye-catching campaigns and marketing emails in minutes with our custom CRM email builder—no coding required.",
+      description: "Design eye-catching campaigns and marketing emails in minutes with our custom CRM email builder, no coding required.",
       icon: <SiElectronbuilder size={30} />,
     },
     {
@@ -36,7 +36,7 @@ const ToolsCard = () => {
     },
     {
       title: "24/7 AI Sales Assistant",
-      description: "An AI-powered virtual CRM assistant that engages leads, supports clients, and drives conversions—even when you're offline.",
+      description: "An AI-powered virtual CRM assistant that engages leads, supports clients, and drives conversions even when you're offline.",
       icon: <MdAssistant size={30}/>,
     },
     {
