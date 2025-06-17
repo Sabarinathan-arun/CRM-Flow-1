@@ -21,7 +21,7 @@ const ToolsCard = () => {
     },
     {
       title: "Unified CRM Lead Inbox",
-      description: "Centralise conversations and improve team collaboration. Manage leads efficiently across email, chat, and more, boosting response time and increasing sales.",
+      description: "Centralise conversations and improve team collaboration. Manage leads efficiently across email, chat, and more, boost response time and increase sales.",
       icon: <BiSolidConversation size={30} aria-hidden="true" />,
     },
     {
@@ -41,7 +41,7 @@ const ToolsCard = () => {
     },
     {
       title: "Flexible Custom CRM Plans",
-      description: "Choose tailored CRM pricing that fits your needs—ideal for startups and small businesses looking to scale without overpaying.",
+      description: "Choose tailored CRM pricing that fits your needs, ideal for startups and small businesses looking to scale without overpaying.",
       icon: <BiSolidCustomize size={30}/>,
     },
     {
