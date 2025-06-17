@@ -5,30 +5,14 @@ const ProcessSteps = () => {
   return (
     <div className="process-container">
       <h2 className="process-title">
-        How a Custom CRM Helped Anchor Leathers Cut Costs by 50% and Increase Productivity by 30%
+        How a Custom CRM Helped Anchor Leathers Increase Sales by 30%
       </h2>
 
       <div className="text-img-box">
         <p>
-          Anchor Leathers was using an expensive CRM platform—paying <strong>$500/month</strong> for complex features that added no value. Their business needed a <strong>custom CRM</strong>—a leaner, smarter solution aligned with real operational needs.
+        Anchor Leathers was struggling with a costly, complex CRM by paying <strong>$500/month</strong> for features that added no value to their workflow. They turned to <strong>CRM Flow</strong>, the <strong>best CRM software for small businesses</strong>, and we built a <strong>custom CRM</strong> tailored to their real business needs. With a simple one-time setup and flexible update model, they <strong>cut CRM costs by 50%</strong> and <strong>boosted productivity by 30%</strong>. Today, they operate with an <strong>easy CRM</strong> focused on <strong>lead management</strong>, sales tracking, and growt without unnecessary features or ongoing subscriptions.
         </p>
 
-        <p>
-          They switched to <strong>CRM Flow</strong>, the <strong>best CRM software for small businesses</strong> looking to reduce cost and improve workflow. We built a fully tailored CRM system, optimized for <strong>lead management</strong>, sales tracking, and growth—with a simple one-time setup and flexible update model.
-        </p>
-
-   
-          <p>As a result, Anchor Leathers:</p>
-          <ul>
-            <li>✅ Reduced CRM costs by <strong>50%</strong></li>
-            <li>✅ Increased team productivity by <strong>30%</strong></li>
-            <li>✅ Removed all unnecessary features and subscriptions</li>
-          </ul>
-  
-
-        <p>
-          Now, they have a <strong>custom-built CRM</strong> that scales with their business—proving that the right CRM isn’t one-size-fits-all, but one designed for your exact workflow.
-        </p>
       </div>
     </div>
   );
