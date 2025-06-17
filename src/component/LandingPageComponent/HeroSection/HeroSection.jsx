@@ -1,8 +1,6 @@
-import React from "react";
 import "../../css/hero.css";
 import img from "../../Asset/Blue and Orange 3D Illustrative Technology Desktop Prototype.png";
 import img2 from "../../Asset/Untitled design.png";
-
 const HeroSection = () => {
   const openForm = () => {
     window.open("https://forms.gle/hdZ2rNwgYp84x6848", "_blank");
@@ -16,22 +14,17 @@ const HeroSection = () => {
     <div className="hero-Box">
       <div className="hero-Container">
         <div className="hero-floating-wrapper1">
-          <img src={img2} alt="CRM dashboard design element" className="hero-floating-img" />
+          <img src={img2} alt="CRM dashboard design element for small businesses" className="hero-floating-img" />
         </div>
 
         <div className="hero-content">
           <h1>
             Best CRM Software for <br />
-            Small Business Growth in 2025
+            Small Business in 2025
           </h1>
 
-          <h2 className="hidden-heading">Custom CRM to Increase Sales & Simplify Lead Management</h2>
+          <h3 className="hidden-heading">Explore our <strong>custom CRM</strong> designed for your business. CRM Flow <strong>increase sales</strong>, enhances <strong>lead management</strong>, and drives revenue growth for real estate and retail. Experience an <strong>easy CRM</strong> that fits your workflow!</h3>
 
-          <h4>
-            Discover a powerful <strong>custom CRM</strong> tailored for your business. <br />
-            Whether you're in real estate or retail, CRM Flow helps <strong>increase sales</strong>, improve <strong>lead management</strong>, and drive real revenue growth. <br />
-            Finally, the <strong>easy CRM</strong> that fits your workflow!
-          </h4>
 
           <div className="hero-buttons">
             <button className="hro-btn" onClick={openForm}>
