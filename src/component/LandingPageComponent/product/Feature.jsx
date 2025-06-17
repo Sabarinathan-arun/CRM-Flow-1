@@ -22,13 +22,13 @@ const ProductFeature = () => {
     {
       title: "Customizable Dashboards",
       description:
-        "Tailor your dashboard to focus on what leads, conversions, sales pipelines, and team performance matter most. Our custom CRM allows small businesses to track lead management and increase efficiency using a clean, powerful interface."
+        "Tailor your dashboard to focus on what leads, conversions, sales pipelines, and team performance matter most. Our custom CRM allows small businesses to track lead management and increase efficiency using a clean, powerful interface.",
       image: Dash
     },
     {
       title: "Real-Time Collaboration",
       description:
-        "Boost productivity with real-time team collaboration. CRM Flow supports instant updates, task sharing, and communication across teams by making it the best CRM software for real estate, startups, and growing teams who need speed and simplicity."
+        "Boost productivity with real-time team collaboration. CRM Flow supports instant updates, task sharing, and communication across teams by making it the best CRM software for real estate, startups, and growing teams who need speed and simplicity.",
       image: Real
     }
   ];
