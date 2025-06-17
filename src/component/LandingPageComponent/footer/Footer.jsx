@@ -10,7 +10,7 @@ const navLinks = [
   { name: "Feature", path: "#feature" },
   { name: "Solutions", path: "#solutions" },
   { name: "Why Us", path: "#why-us" },
-]; 
+];   
 
 const socialLinks = [
   { icon: <FaLinkedin />, url: "https://www.linkedin.com/company/profitly/" },
