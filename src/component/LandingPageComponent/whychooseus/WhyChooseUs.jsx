@@ -6,8 +6,8 @@ const WhyChooseUs = () => {
   const features = [
     {
       id: 1,
-      title: "Custom CRM That Fits Your Needs",
-      description: "CRM Flow is fully customizabl, built to adapt to your unique workflows, industries, and sales goals. Perfect for small businesses aiming to grow fast.",
+      title: "CRM That Speaks Your Business Language",
+      description: "CRM Flow is fully customizable, built to adapt to your unique workflows, industries, and sales goals. Perfect for small businesses aiming to grow fast.",
     },
     {
       id: 2,
