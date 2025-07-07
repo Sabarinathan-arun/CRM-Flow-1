@@ -8,48 +8,48 @@ import { RiCustomerService2Fill } from 'react-icons/ri';
 import { MdAssistant, MdOutlinePayments } from 'react-icons/md';
 
 const ToolsCard = () => {
-  const tools = [
-    {
-      title: "Custom CRM Smart Forms",
-      description: "Create branded, user-friendly forms that streamline CRM lead management. Capture and convert leads with ease, perfect for small business growth.",
-      icon: <FaWpforms size={30} aria-hidden="true" />,
-    },
-    {
-      title: "Instant CRM Meeting Scheduler",
-      description: "Book client meetings in seconds via Zoom, Google Meet, or Teams. An essential tool in the best CRM for real estate and sales engagement.",
-      icon: <SiGotomeeting size={30} aria-hidden="true" />,
-    },
-    {
-      title: "Unified CRM Lead Inbox",
-      description: "Centralise conversations and improve team collaboration. Manage leads efficiently across email, chat, and more, boost response time and increase sales.",
-      icon: <BiSolidConversation size={30} aria-hidden="true" />,
-    },
-    {
-      title: "CRM Email Builder for Campaigns",
-      description: "Design eye-catching campaigns and marketing emails in minutes with our custom CRM email builder, no coding required.",
-      icon: <SiElectronbuilder size={30} />,
-    },
-    {
-      title: "Real-Time CRM Live Chat",
-      description: "Deliver instant support and nurture leads in real-time. Essential for any CRM software that aims to improve customer experience and close deals faster.",
-      icon: <RiCustomerService2Fill size={30}/>,
-    },
-    {
-      title: "24/7 AI Sales Assistant",
-      description: "An AI-powered virtual CRM assistant that engages leads, supports clients, and drives conversions even when you're offline.",
-      icon: <MdAssistant size={30}/>,
-    },
-    {
-      title: "Flexible Custom CRM Plans",
-      description: "Choose tailored CRM pricing that fits your needs, ideal for startups and small businesses looking to scale without overpaying.",
-      icon: <BiSolidCustomize size={30}/>,
-    },
-    {
-      title: "Easy CRM One-Time Payment",
-      description: "Avoid monthly fees with our one-time payment CRM option. Perfect for businesses that want simplicity, control, and long-term savings.",
-      icon: <MdOutlinePayments size={30}/>,
-    },
-  ];
+    const tools = [
+        {
+            title: "Smart Forms",
+            description: "Capture customer insights effortlessly with sleek, intuitive forms that blend into your brand's style. Share them anywhere, anytime.",
+            icon: <FaWpforms size={30}/>, 
+        },
+        {
+            title: "Instant Meet",
+            description: "Booking a meeting should be as easy as a click. Connect instantly with your clients over Zoom, Google Meet, or Teams without the fuss.",
+            icon: <SiGotomeeting  size={30}/>, 
+        },
+        {
+            title: "Unified Conversations",
+            description: "Bring your team’s conversations together in one place—boost productivity and never miss a lead with a single inbox for all.",
+            icon: <BiSolidConversation size={30}/>, 
+        },
+        {
+            title: "Creative Email Builder",
+            description: "Design emails that dazzle—create eye-catching campaigns, newsletters, and updates in minutes with a seamless drag-and-drop tool.",
+            icon: <SiElectronbuilder size={30}/>,
+        },
+        {
+            title: "Real-Time Customer Chat",
+            description: "Talk to your customers in real-time, delivering tailored solutions instantly. Foster relationships, not just transactions.",
+            icon: <RiCustomerService2Fill  size={30}/>, 
+        },
+        {
+            title: "24/7 AI Assistant",
+            description: "Let smart AI bots do the heavy lifting. Engage customers, generate leads, and offer support round-the-clock, even when you're not there.",
+            icon: <MdAssistant size={30}/>,
+        },
+        {
+            title: "Customizable Plans",
+            description: "Bring your team’s conversations together in one place—boost productivity and never miss a lead with a single inbox for all.",
+            icon: <BiSolidCustomize size={30}/>, 
+        },
+        {
+            title: "One-Time Payment",
+            description: "Pay a one-time fee for CRM Flow. After the initial purchase, you only pay for maintenance or any updates you may need over time.",
+            icon: <MdOutlinePayments  size={30}/>, 
+        }
+    ];
 
 
     return (

@@ -1,29 +1,31 @@
 import React from "react";
-import { Helmet } from "react-helmet";
-import "../../css/chooseus.css";
+import "../../css/chooseus.css"; // Import external CSS
 
 const WhyChooseUs = () => {
-  const features = [
-    {
-      id: 1,
-      title: "CRM That Speaks Your Business Language",
-      description: "CRM Flow is fully customizable, built to adapt to your unique workflows, industries, and sales goals. Perfect for small businesses aiming to grow fast.",
-    },
-    {
-      id: 2,
-      title: "Easy Lead Management",
-      description: "Our Custom CRM offers simple lead management features so small business owners and real estate pros can boost revenue.",
-    },
-    {
-      id: 3,
-      title: "Data Security Solutions",
-      description: "Keep information safe with end-to-end encryption, role-based access, and automated security alerts.",
-    },
-  ];
+  const features = [
+    { 
+    id: 1, 
+     title: "Flexibility" ,
+     description: "Our CRM Flow is fully customizable, ensuring it adapts to your specific needs and business goals."
+    },
+    { id: 2, 
+    title: "Cost-Effective",
+    description: "Pay only once for the software and benefit from affordable maintenance as needed—no recurring fees."
+    },
+    { 
+    id: 3, 
+    title: "24/7 Assistance",
+    description: "Enjoy around-the-clock support with our AI Assistant, keeping your business running smoothly at all times."
+ },
+  ];
 
-  return (
-    <div className="why-container" >    
-      <h1 className="why-title">Why Choose CRM Flow as the Best Custom CRM</h1>
+
+  return (
+    <div className="why-container" >
+      <h1 className="why-title">WHY PEOPLE CHOOSE US</h1>
+      <p className="why-subtitle">
+      Learn why businesses rely on us to streamline operations and boost productivity with flexible, cost-effective solutions.
+      </p>
 
       <div className="why-grid">
         {features.map((feature) => (

@@ -5,7 +5,7 @@ import Toast from "./alert/Toast";
 
 const FooterForm = () => {
   const [formData, setFormData] = useState({
-    Email: "",  
+    Email: "",
     Message: "",
   });
   const [response, setResponse] = useState("");
